@@ -13,8 +13,9 @@ speed = 0.5
 try:
     # Wait for the servo to reach its starting position
     time.sleep(initial_delay)
-    i = 7
+    i = 6
     while True:
+        i = round(i, 1)
         p.ChangeDutyCycle(i)
         print(i)
         time.sleep(2)
