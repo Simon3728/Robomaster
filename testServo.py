@@ -19,27 +19,27 @@ try:
         if position == '1':
             p.ChangeDutyCycle(2)  # Full speed clockwise
             time.sleep(2.5 * rotation_time)
-            p.ChangeDutyCycle(0)  # Stop
+            p.ChangeDutyCycle(2.5)  # Stop
         elif position == '2':
             p.ChangeDutyCycle(2)  # Medium speed clockwise
             time.sleep(1.5 * rotation_time)
-            p.ChangeDutyCycle(0)  # Stop
+            p.ChangeDutyCycle(2.5)  # Stop
         elif position == '3':
             p.ChangeDutyCycle(2)  # Medium speed clockwise
             time.sleep(0.5 * rotation_time)
-            p.ChangeDutyCycle(0)  # Stop
+            p.ChangeDutyCycle(2.5)  # Stop
         elif position == '4':
             p.ChangeDutyCycle(3)
             time.sleep(0.5 * rotation_time)
-            p.ChangeDutyCycle(0)  # Stop
+            p.ChangeDutyCycle(2.5)  # Stop
         elif position == '5':
             p.ChangeDutyCycle(3)
             time.sleep(1.5 * rotation_time)
-            p.ChangeDutyCycle(0)  # Stop
+            p.ChangeDutyCycle(2.5)  # Stop
         elif position == '6':
             p.ChangeDutyCycle(3)
             time.sleep(2.5 * rotation_time)
-            p.ChangeDutyCycle(0)  # Stop
+            p.ChangeDutyCycle(2.5)  # Stop
         elif position == '7':
             break  # Exit the loop if position 6 is selected
         else:
