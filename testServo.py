@@ -6,11 +6,15 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(servoPIN, GPIO.OUT)
 
 p = GPIO.PWM(servoPIN, 50)  # GPIO 17 as PWM with 50Hz
-p.start(7.5)  # Initialization at the middle position
+p.start(0)  # Initialization
 
 rotation_time = 0.5  # Time in seconds for one complete rotation (adjust as needed)
+initial_delay = 2.0  # Time in seconds for initial delay (adjust as needed)
 
 try:
+    # Wait for the servo to reach its starting position
+    time.sleep(initial_delay)
+    
     while True:
         position = input("Enter position (1-6): ")
         if position == '1':
@@ -44,6 +48,4 @@ p.stop()
 GPIO.cleanup()
 
 
-p.stop()
-GPIO.cleanup()
 
