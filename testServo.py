@@ -13,13 +13,13 @@ speed = 0.5
 try:
     # Wait for the servo to reach its starting position
     time.sleep(initial_delay)
-    i = 2.7
+    i = 7
     while True:
         p.ChangeDutyCycle(i)
         print(i)
         time.sleep(2)
-        i += 0.0125
-        if i >= 2.8:
+        i += 0.1
+        if i >= 8:
             break
 
 except KeyboardInterrupt:
