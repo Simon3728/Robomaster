@@ -1,16 +1,20 @@
+import RPi.GPIO as GPIO
 import time
-import Adafruit_PCA9685
 
-pwm = Adafruit_PCA9685.PCA9685()
+servoPIN = 4
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(servoPIN, GPIO.OUT)
 
-# Set frequency to 60hz, good for servos.
-pwm.set_pwm_freq(60)
+p = GPIO.PWM(servoPIN, 50)  # GPIO 17 as PWM with 50Hz
+p.start(2.5)  # Initialization
 
-servo_channel = 4  # Channel number of the servo
+rotation_time = 2.0  # Time in seconds for one complete rotation (adjust as needed)
 
-# Set the servo to a specific position
-pwm.set_pwm(servo_channel, 0, 100)
-time.sleep(5)
+try:
+    p.ChangeDutyCycle(5)  # Set the duty cycle for the desired position
+    time.sleep(rotation_time)  # Sleep for the rotation time
+except KeyboardInterrupt:
+    pass
 
-# Turn off the servo
-pwm.set_pwm(servo_channel, 0, 0)
+p.stop()
+GPIO.cleanup()
