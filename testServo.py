@@ -11,8 +11,13 @@ p.start(2.5)  # Initialization
 rotation_time = 2.0  # Time in seconds for one complete rotation (adjust as needed)
 
 try:
-    p.ChangeDutyCycle(5)  # Set the duty cycle for the desired position
+    p.ChangeDutyCycle(3)  # Set the duty cycle for the desired position
     time.sleep(rotation_time)  # Sleep for the rotation time
+    p.ChangeDutyCycle(2.5)
+    time.sleep(rotation_time)
+    p.ChangeDutyCycle(10)  # Set the duty cycle for the desired position
+    time.sleep(rotation_time)  # Sleep for the rotation time
+    p.ChangeDutyCycle(2.5)
 except KeyboardInterrupt:
     pass
 
