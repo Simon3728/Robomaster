@@ -13,38 +13,14 @@ speed = 0.5
 try:
     # Wait for the servo to reach its starting position
     time.sleep(initial_delay)
-    
+    i = 2
     while True:
-        position = input("Enter position (1-6): ")
-        if position == '1':
-            p.ChangeDutyCycle(2)  # Full speed clockwise
-            time.sleep(2.5 * rotation_time)
-            p.ChangeDutyCycle(2.5)  # Stop
-        elif position == '2':
-            p.ChangeDutyCycle(2)  # Medium speed clockwise
-            time.sleep(1.5 * rotation_time)
-            p.ChangeDutyCycle(2.5)  # Stop
-        elif position == '3':
-            p.ChangeDutyCycle(2)  # Medium speed clockwise
-            time.sleep(0.5 * rotation_time)
-            p.ChangeDutyCycle(2.5)  # Stop
-        elif position == '4':
-            p.ChangeDutyCycle(3)
-            time.sleep(0.5 * rotation_time)
-            p.ChangeDutyCycle(2.5)  # Stop
-        elif position == '5':
-            p.ChangeDutyCycle(3)
-            time.sleep(1.5 * rotation_time)
-            p.ChangeDutyCycle(2.5)  # Stop
-        elif position == '6':
-            p.ChangeDutyCycle(3)
-            time.sleep(2.5 * rotation_time)
-            p.ChangeDutyCycle(2.5)  # Stop
-        elif position == '7':
-            break  # Exit the loop if position 6 is selected
-        else:
-            print("Invalid position. Please enter a number between 1 and 6.")
-            continue
+        p.ChangeDutyCycle(i)
+        print(i)
+        time.sleep(2)
+        i += 0.1
+        if i >= 3:
+            break
 
 except KeyboardInterrupt:
     pass
