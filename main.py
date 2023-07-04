@@ -20,7 +20,7 @@ class Zustand(Enum):
 def main():
     # Initialize
     ep_robot = robot.Robot()
-    ep_robot.initialize(conn_type="ap")
+    ep_robot.initialize(conn_type="sta")
     ep_arm = ep_robot.robotic_arm
     ep_camera = ep_robot.camera
     ep_chassis = ep_robot.chassis
