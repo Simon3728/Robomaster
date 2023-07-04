@@ -4,8 +4,7 @@ import time
 servoPIN = 4
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(servoPIN, GPIO.OUT)
-
-p = GPIO.PWM(servoPIN, 5)  # GPIO 17 as PWM with 50Hz
+p = GPIO.PWM(servoPIN, 20)  # GPIO 17 as PWM with 50Hz
 p.start(0)  # Initialization
 
 rotation_time = 0.5  # Time in seconds for one complete rotation (adjust as needed)
@@ -18,27 +17,27 @@ try:
     while True:
         position = input("Enter position (1-6): ")
         if position == '1':
-            p.ChangeDutyCycle(8)  # Full speed clockwise
+            p.ChangeDutyCycle(1)  # Full speed clockwise
             time.sleep(2.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '2':
-            p.ChangeDutyCycle(7)  # Medium speed clockwise
+            p.ChangeDutyCycle(2)  # Medium speed clockwise
             time.sleep(1.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '3':
-            p.ChangeDutyCycle(6)  # Medium speed clockwise
+            p.ChangeDutyCycle(3)  # Medium speed clockwise
             time.sleep(0.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '4':
-            p.ChangeDutyCycle(5)
+            p.ChangeDutyCycle(4)
             time.sleep(0.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '5':
-            p.ChangeDutyCycle(4)
+            p.ChangeDutyCycle(5)
             time.sleep(1.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '6':
-            p.ChangeDutyCycle(3)
+            p.ChangeDutyCycle(6)
             time.sleep(2.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '7':
