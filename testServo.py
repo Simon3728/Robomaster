@@ -30,15 +30,15 @@ try:
             time.sleep(0.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '4':
-            p.ChangeDutyCycle(7.5 - speed)
+            p.ChangeDutyCycle(5)
             time.sleep(0.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '5':
-            p.ChangeDutyCycle(7.5 - speed)
+            p.ChangeDutyCycle(5)
             time.sleep(1.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '5':
-            p.ChangeDutyCycle(7.5 - speed)
+            p.ChangeDutyCycle(5)
             time.sleep(2.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '7':
