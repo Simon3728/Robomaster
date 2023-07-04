@@ -17,7 +17,7 @@ try:
     while True:
         position = input("Enter position (1-6): ")
         if position == '1':
-            p.ChangeDutyCycle(1)  # Full speed clockwise
+            p.ChangeDutyCycle(2)  # Full speed clockwise
             time.sleep(2.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '2':
@@ -25,19 +25,19 @@ try:
             time.sleep(1.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '3':
-            p.ChangeDutyCycle(3)  # Medium speed clockwise
+            p.ChangeDutyCycle(2)  # Medium speed clockwise
             time.sleep(0.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '4':
-            p.ChangeDutyCycle(4)
+            p.ChangeDutyCycle(3)
             time.sleep(0.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '5':
-            p.ChangeDutyCycle(5)
+            p.ChangeDutyCycle(3)
             time.sleep(1.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '6':
-            p.ChangeDutyCycle(6)
+            p.ChangeDutyCycle(3)
             time.sleep(2.5 * rotation_time)
             p.ChangeDutyCycle(0)  # Stop
         elif position == '7':
