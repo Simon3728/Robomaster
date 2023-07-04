@@ -6,8 +6,8 @@ import sys
 
 # In networking connection mode, the current IP address of the robot is 192.168.0.115 and the control command port is port 40923.
 # Replace the IP address of the robot with the actual one.
-host = "192.168.0.115"
-port = 40923
+host = "192.168.0.40"
+port = 48742
 
 def main():
 
