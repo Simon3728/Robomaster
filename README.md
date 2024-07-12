@@ -10,10 +10,6 @@ This project involved programming a modified DJI RoboMaster EP Core using a Pyth
 
 2. **Tooling Bits Detection**: We used a similar color-based approach to locate tooling bits painted in distinct colors. The robot needed to accurately approach these bits and collect them using an electromagnet. This required precise positioning directly in front of the bits for successful collection and sorting.
 
-Despite the limitations of DJI's API and several internal functions not working correctly, the project was successful. Below is a short video showcasing the modified RoboMaster in action.
-
-<video src="Video_Robomaster.mp4" controls="controls" style="max-width: 100%; height: auto;">
-    Your browser does not support the video tag.
-</video>
+Despite the limitations of DJI's API and several internal functions not working correctly, the project was successful. YOu can watch a short video (Video_Robomaster.mp4) showcasing the modified RoboMaster in action.
 
 *Note: I was responsible for all coding and some CAD parts. My team handled the construction, presentations, and other tasks.*
